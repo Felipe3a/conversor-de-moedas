@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    <title>Convert Money</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Convert Money </h1>
+        </header>
+
+
+
+        <main>
+
+            <label>
+                <b>de</b>
+                <select id='moeda'>
+                    <option> R$ Real Brasileiro</option>
+                </select>
+            </label>
+
+
+
+            <label>
+                <b>para</b>
+                <select id="moeda-selecionada" >
+                    <option> US$ Dólar Americano </option>
+                    <option>€ Euro  </option>
+                  <option> Ƀ bitcoin</option>
+                </select>
+            </label>
+
+
+            <label>
+             <b>   Valor </b><input id="valor-em-reais" placeholder="10.000,00">
+            </label>
+
+
+            <button id="Converter" type="button">converter</button>
+
+
+            <section>
+                <div class="currence-container">
+                    <img src="brasil 2.svg" alt="bandeira do Brasil">
+                    <p class="moeda"id="real" >Real</p>
+                    <p class="moeda"id="valor">10.000,00</p>
+                </div>
+
+
+                <img  class="arrow-img" src="Vector.png" alt="Seta">
+
+
+                <div class="currence-container 2">
+                    <img  src="estados-unidos (1) 1.svg"  id="bandeira"   alt="bandeira dos Estados-Unidos">
+                  
+                    <p class="moeda" id ="nome-da-moeda" > Dólar Americano</p>
+                    <p  class="moeda"id="resultado">2.000,00</p>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+</body>
+
+<script src="convertmaney.js"></script>
+
+</html>
