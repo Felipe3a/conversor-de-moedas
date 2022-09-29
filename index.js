@@ -58,7 +58,7 @@ if(select.value === "€ Euro"){
 
   nomeDaMoeda.innerHTML = "Euro"
 
-  trocaDeBandeira.src ="euro.png"
+  trocaDeBandeira.src ="icone-euro.png"
 
 
 }
@@ -67,7 +67,7 @@ if(select.value === "US$ Dólar Americano"){
 
   nomeDaMoeda.innerHTML ="Dólar americano"
 
-  trocaDeBandeira.src="estados-unidos (1) 1.svg"  
+  trocaDeBandeira.src="estados-unidos.png"  
 
 
 
@@ -80,7 +80,7 @@ if(select.value === "Ƀ bitcoin"){
 
   nomeDaMoeda.innerHTML ="bitcoin"
 
-  trocaDeBandeira.src="Ƀ bitcoin(1) 1 (1).png"  
+  trocaDeBandeira.src="icone-bitcoin.png"  
 
 
 }
