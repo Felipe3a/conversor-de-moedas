@@ -3,17 +3,26 @@ const button = document.getElementById("Converter")
 const select = document.getElementById("moeda-selecionada")
 
 
-const dolar = 5.25
-const euro = 5.26
-const bitcoin = 102.534
+const bitcoin = 102.534 
 
-convertValue =() =>{
+convertValue = async () => {
 
   const inputReais = document.getElementById("valor-em-reais").value
   const valorEmReais = document.getElementById("valor")
   const resultado = document.getElementById("resultado")
 
 
+  // Async Await
+  const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+  const dolar = data.USDBRL.high
+
+  const euro = data.EURBRL.high
+
+  const bitcoin = data.BTCBRL.high
+
+
+  console.log(data)
 
   //valorEmReais.innerHTML = inputReais
   //resultado.innerHTML=  inputReais /dolar
@@ -39,56 +48,56 @@ convertValue =() =>{
 
 
   if (select.value === "Ƀ bitcoin") {
-    resultado.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'BTC', minimumFractionDigits: 8 }).
-    format(inputReais / bitcoin)
+    resultado.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'BTC' }).
+      format(inputReais / bitcoin)
   }
 }
 
 
-trocaDeMoeda =()=>{
+trocaDeMoeda = () => {
 
-const nomeDaMoeda = document.getElementById("nome-da-moeda")
+  const nomeDaMoeda = document.getElementById("nome-da-moeda")
 
-const trocaDeBandeira = document.getElementById("bandeira")
-
-
-
-if(select.value === "€ Euro"){
-
-  nomeDaMoeda.innerHTML = "Euro"
-
-  trocaDeBandeira.src ="icone-euro.png"
-
-
-}
-
-if(select.value === "US$ Dólar Americano"){
-
-  nomeDaMoeda.innerHTML ="Dólar americano"
-
-  trocaDeBandeira.src="estados-unidos.png"  
+  const trocaDeBandeira = document.getElementById("bandeira")
 
 
 
+  if (select.value === "€ Euro") {
+
+    nomeDaMoeda.innerHTML = "Euro"
+
+    trocaDeBandeira.src = "icone-euro.png"
 
 
-}
+  }
 
+  if (select.value === "US$ Dólar Americano") {
 
-if(select.value === "Ƀ bitcoin"){
+    nomeDaMoeda.innerHTML = "Dólar americano"
 
-  nomeDaMoeda.innerHTML ="bitcoin"
-
-  trocaDeBandeira.src="icone-bitcoin.png"  
-
-
-}
-
-console.log("fui trocado")
+    trocaDeBandeira.src = "estados-unidos.png"
 
 
 
-convertValue()
+
+
+  }
+
+
+  if (select.value === "Ƀ bitcoin") {
+
+    nomeDaMoeda.innerHTML = "bitcoin"
+
+    trocaDeBandeira.src = "icone-bitcoin.png"
+
+
+  }
+
+  console.log("fui trocado")
+
+
+
+  convertValue()
 
 
 }
