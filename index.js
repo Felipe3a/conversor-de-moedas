@@ -22,7 +22,7 @@ convertValue = async () => {
   const bitcoin = data.BTCBRL.high
 
 
-  console.log(data)
+ 
 
   //valorEmReais.innerHTML = inputReais
   //resultado.innerHTML=  inputReais /dolar
