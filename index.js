@@ -12,7 +12,7 @@ convertValue = async () => {
   const resultado = document.getElementById("resultado")
 
 
-  // Async Await
+  // Async Await 
   const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
   const dolar = data.USDBRL.high
@@ -66,7 +66,7 @@ trocaDeMoeda = () => {
 
     nomeDaMoeda.innerHTML = "Euro"
 
-    trocaDeBandeira.src = "icone-euro.png"
+    trocaDeBandeira.src = "./imagens/icone-euro.png"
 
 
   }
@@ -88,7 +88,7 @@ trocaDeMoeda = () => {
 
     nomeDaMoeda.innerHTML = "bitcoin"
 
-    trocaDeBandeira.src = "icone-bitcoin.png"
+    trocaDeBandeira.src = "./imagens/icone-bitcoin.png"
 
 
   }

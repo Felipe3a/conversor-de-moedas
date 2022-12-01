@@ -5,22 +5,32 @@
 }
 
 body {
-    
+
     background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-   height: 800px;
-    width:375px;
+    height: 800px;
+    width: 375px;
     background-color: #f4f4f4;
-    margin: 0 auto;
-    margin-top: 100px;
-border-radius: 5px;
+
+    border-radius: 5px;
 }
 
 
 
-header { background-color: #1883e2;}
+header {
+    background-color: #1883e2;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 h1 {
     font-style: normal;
@@ -28,11 +38,12 @@ h1 {
     font-size: 24px;
     line-height: 18px;
     color: #F4F4F4;
-    text-align: center;
-    padding: 25px;
+
 }
 
-main { padding: 24px;}
+main {
+    padding: 24px;
+}
 
 
 label {
@@ -108,6 +119,10 @@ button:active {
 section {
     border-radius: 4px;
     border: 1px solid #1B83E2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 
@@ -115,9 +130,11 @@ section {
 .currence-container {
 
     padding: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
-
 
 
 .moeda {
@@ -132,10 +149,8 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
-.arrow-img
-{margin:15px auto;
-display: block;}
 
+#resultado,#valor{
 
-
-
+    color: #1883e2;
+}
